@@ -21,6 +21,9 @@ body {
     background-color: #cacacab7;
     text-align: left;
     width: 30%;
+    display: flex;
+    align-items: center;
+
 }
 
 .footer_myName{
@@ -37,4 +40,15 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.container_meteo1 div,
+.container_meteo2 div,
+.container_meteo3 div {
+    padding: 0px 0px 0px 10px;
+}
+.container_meteo1 div:nth-child(2),
+.container_meteo2 div:nth-child(2),
+.container_meteo3 div:nth-child(2){
+    padding: 0px 0px 0px 10px;
 }
