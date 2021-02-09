@@ -2,12 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="meteo.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>TpHTML</title>
     </head>
 
-    <body onload="showCity()">
+    <body>
 
         <!--Tête de page-->
         <header>
@@ -17,9 +17,23 @@
         </header>
 
         <!--Bloc Méteo-->
+        <div id="choix_ville" onchange=showCity()>
+            <form method="POST" action="">
+                <p>
+                    <label for="pays"> Choisir une ville: </label>
+                    <select name="ville" id="ville" >
+                        <option value="choix">--Please choose an option--</option>
+                        <option  value="paris">Paris</option>
+                        <option  value="lome" >Lomé</option>
+                        <option  value="pekin">Pékin</option>
+                    </select>
+                </p>
+                <p id="label">You selected: </p>
+            </form>
+        </div>
         <div id="container">
             
-            <div class="container_meteo1">
+            <div class="city" id="paris">
                 <div>
                     <p class="ville">Paris</p>
                     <p class="temps"> 2° Pluvieux</p>
@@ -29,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="container_meteo2">
+            <div class="city" id="lome">
                 <div>
                     <p class="ville">Lomé</p>
                     <p class="temps"> -3° Orageux</p>
@@ -39,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="container_meteo3">
+            <div class="city" id="pekin">
                 <div>
                     <p class="ville">Pékin</p>
                     <p class="temps"> 24° Ensoleillé</p>

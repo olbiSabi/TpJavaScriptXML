@@ -13,9 +13,9 @@ body {
     text-align: center;
     color:  white
 }
-.container_meteo1, 
-.container_meteo2,
-.container_meteo3{
+#paris, 
+#lome,
+#pekin{
     padding: 5px;
     margin: 0px 0px 30px 0px;
     background-color: #cacacab7;
@@ -42,13 +42,17 @@ img{
     justify-content: space-around;
 }
 
-.container_meteo1 div,
-.container_meteo2 div,
-.container_meteo3 div {
+#paris div,
+#lome div,
+#pekin div {
     padding: 0px 0px 0px 10px;
 }
-.container_meteo1 div:nth-child(2),
-.container_meteo2 div:nth-child(2),
-.container_meteo3 div:nth-child(2){
+#paris div:nth-child(2),
+#lome div:nth-child(2),
+#pekin div:nth-child(2){
     padding: 0px 0px 0px 10px;
+}
+
+#choix_ville select{
+
 }
