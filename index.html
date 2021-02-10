@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="meteo.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>TpHTML</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="meteo.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>TpHTML</title>
+</head>
 
-        <!--Tête de page-->
-        <header>
-            <div class="titre_tp">
-                <h1>TP Météo HTML</h1>
-            </div>
-        </header>
+<body>
 
-        <!--Bloc Méteo-->
-        <div id="choix_ville" onchange=showCity()>
-            <form method="POST" action="">
-                <p>
-                    <label for="pays"> Choisir une ville: </label>
-                    <select name="ville" id="ville" >
-                        <option value="choix">--Please choose an option--</option>
+    <!--Tête de page-->
+    <header>
+        <div class="titre_tp">
+            <h1>TP Météo HTML</h1>
+        </div>
+    </header>
+
+    <!--Bloc Méteo-->
+    <div id="choix_ville" onchange=showCity()>
+        <form method="POST" action="">
+            <p>
+                <label for="pays"> Choisir une ville: </label>
+                <select name="ville" id="ville">
+                        <option  value="choix">--Please choose an option--</option>
                         <option  value="paris">Paris</option>
                         <option  value="lome" >Lomé</option>
                         <option  value="pekin">Pékin</option>
-                    </select>
-                </p>
-                <p id="label">You selected: </p>
-            </form>
-        </div>
-        <div id="container">
-            
-            <div class="city" id="paris">
-                <div>
-                    <p class="ville">Paris</p>
-                    <p class="temps"> 2° Pluvieux</p>
-                </div>
-                <div>
-                    <img src="image/pluicieux.png" alt="temps pluivieux">
-                </div>
+                 </select>
+            </p>
+            <p id="label">You selected: </p>
+        </form>
+    </div>
+    <div id="container">
+
+        <div class="city" id="paris">
+            <div>
+                <p class="ville">Paris</p>
+                <p><sup class="tempsparis">--</sup> <sup>°C Pluvieux</sup></p>
             </div>
-
-            <div class="city" id="lome">
-                <div>
-                    <p class="ville">Lomé</p>
-                    <p class="temps"> -3° Orageux</p>
-                </div>
-                <div>
-                    <img src="image/orageux.png" alt="orageux">
-                </div>
+            <div>
+                <img src="image/pluicieux.png" alt="temps pluivieux">
             </div>
-
-            <div class="city" id="pekin">
-                <div>
-                    <p class="ville">Pékin</p>
-                    <p class="temps"> 24° Ensoleillé</p>
-                </div>
-                <div>
-                    <img src="image/ensoleillé.png" alt="Ensoleillé">
-                </div>
-            </div> 
-
         </div>
 
-        <!--Pied de page-->
-        <footer>
-            <div class="footer_myName">
-                <p>ONIANKITAN Sabi</p>
-                <p>Icones météo par <a href="https://thenounproject.com/">Noun Project</a></p>
+        <div class="city" id="lome">
+            <div>
+                <p class="ville">Lomé</p>
+                <p> <sup class="tempslome">--</sup> <sup>°C Orageux</sup></p>
             </div>
-        </footer>
-    </body>
+            <div>
+                <img src="image/orageux.png" alt="orageux">
+            </div>
+        </div>
+
+        <div class="city" id="pekin">
+            <div>
+                <p class="ville">Pékin</p>
+                <p><sup class="tempspekin">--</sup> <sup>°C Ensoleillé</sup></p>
+            </div>
+            <div>
+                <img src="image/ensoleillé.png" alt="Ensoleillé">
+            </div>
+        </div>
+
+    </div>
+
+    <!--Pied de page-->
+    <footer>
+        <div class="footer_myName">
+            <p>ONIANKITAN Sabi</p>
+            <p>Icones météo par <a href="https://thenounproject.com/">Noun Project</a></p>
+        </div>
+    </footer>
+</body>
+
 </html>
